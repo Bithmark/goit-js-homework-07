@@ -1,0 +1,36 @@
+
+.gallery__image {
+    width: 800px;
+    height: 100%;
+}
+
+.gallery__card{
+    padding: 15px;
+    background: yellow;
+    border: 15px solid aqua;
+}
+
+.gallery__card:not(:last-child){
+    margin-bottom: 30px;
+  }
+
+.gallery {
+    list-style: none;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
