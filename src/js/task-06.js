@@ -11,7 +11,7 @@ function onInputBlur(event) {
   // console.dir(event.currentTarget);
   // console.log('blur');
   if (
-    event.currentTarget.getAttribute('data-length') >
+    +event.currentTarget.getAttribute('data-length') >
     event.currentTarget.value.length
   ) {
     input.classList.add('valid');
