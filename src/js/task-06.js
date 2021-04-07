@@ -9,8 +9,8 @@ function onInputBlur(event) {
   // console.log('blur');
   console.log(event.currentTarget.value.length);
   if (
-    +event.currentTarget.getAttribute('data-length') ===
-    event.currentTarget.value.length
+    event.currentTarget.value.length >=
+    +event.currentTarget.getAttribute('data-length')
   ) {
     input.classList.add('valid');
   } else {
