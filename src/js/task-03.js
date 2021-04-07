@@ -17,25 +17,15 @@ const images = [
   ];
 
 
-  const getUlEl = document.querySelector('ul')
+const getUlEl = document.querySelector('ul');
 
-  const makeImageCard = ({url, alt }) => {
-      const itemEl = document.createElement('li');
-      itemEl.classList.add('gallery__card')
-      
-      const imageEl = document.createElement('img');
-      imageEl.src = url;
-      imageEl.alt = alt;
-      imageEl.classList.add('gallery__image')
+const makeImageCard = images => {
+  const { url, alt } = images;
+  return `<li class = 'gallery__card'><img src="${url}" alt="${alt} img class = 'gallery__image'" width = 700</li>`;
+};
 
-      getUlEl.append(itemEl);
 
-      itemEl.insertAdjacentElement("afterbegin", imageEl)
-      
-      return itemEl
-  }
+const element = images.map(makeImageCard).join('');
 
-  const elements = images.map(makeImageCard);
+getUlEl.insertAdjacentHTML('beforeend', element);
 
-  console.log(elements);
-  getUlEl.append(...elements);

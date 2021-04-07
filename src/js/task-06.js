@@ -14,8 +14,8 @@ function onInputBlur(event) {
     event.currentTarget.getAttribute('data-length') >
     event.currentTarget.value.length
   ) {
-    event.currentTarget.style.borderColor = '#f44336';
+    event.currentTarget.style.borderColor = '#valid';
   } else {
-    event.currentTarget.style.borderColor = '#4caf50';
+    event.currentTarget.style.borderColor = '#invalid';
   }
 }

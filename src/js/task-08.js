@@ -6,6 +6,7 @@ const refs = {
 };
 
 function createBoxes(amount) {
+  refs.boxesDiv.innerHTML = '';
   const arrayBoxs = [];
   for (let i = 0; i < amount; i += 1) {
     const size = 30 + i * 10;
@@ -19,7 +20,14 @@ function createBoxes(amount) {
 }
 
 function randomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  
+    const random = (min, max) => Math.round(Math.random() * (max - min) + min);
+
+    const red = random(0, 255);
+    const green = random(0, 255);
+    const blue = random(0, 255);
+
+    return `rgb(${red},${green},${blue})`;
 }
 
 function destroyBoxes() {
